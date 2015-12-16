@@ -25,6 +25,7 @@
 		4CC8960B119F0CED00ED61B6 /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC89608119F0CED00ED61B6 /* MWFeedItem.m */; };
 		4CC8960F119F0CFB00ED61B6 /* NSString+XMLEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8960E119F0CFB00ED61B6 /* NSString+XMLEntities.m */; };
 		4CC89612119F0D0C00ED61B6 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC89611119F0D0C00ED61B6 /* RootViewController.m */; };
+		DC88B2911C2114C500AE9936 /* FeedCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DC88B2901C2114C500AE9936 /* FeedCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,8 @@
 		4CC89610119F0D0C00ED61B6 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		4CC89611119F0D0C00ED61B6 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* MWFeedParser-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MWFeedParser-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		DC88B28F1C2114C500AE9936 /* FeedCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCache.h; sourceTree = "<group>"; };
+		DC88B2901C2114C500AE9936 /* FeedCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 		4CC89602119F0CDE00ED61B6 /* MWFeedParser */ = {
 			isa = PBXGroup;
 			children = (
+				DC88B28F1C2114C500AE9936 /* FeedCache.h */,
+				DC88B2901C2114C500AE9936 /* FeedCache.m */,
 				4CC89603119F0CED00ED61B6 /* MWFeedParser.h */,
 				4CAA79C911A406890009078E /* MWFeedParser_Private.h */,
 				4CC89604119F0CED00ED61B6 /* MWFeedParser.m */,
@@ -269,6 +274,7 @@
 				4CC8960A119F0CED00ED61B6 /* MWFeedInfo.m in Sources */,
 				4CC8960B119F0CED00ED61B6 /* MWFeedItem.m in Sources */,
 				4CC8960F119F0CFB00ED61B6 /* NSString+XMLEntities.m in Sources */,
+				DC88B2911C2114C500AE9936 /* FeedCache.m in Sources */,
 				4CC89612119F0D0C00ED61B6 /* RootViewController.m in Sources */,
 				4CAD0E1211DA03BD0086F5F8 /* DetailTableViewController.m in Sources */,
 				4C65F2EB12085ACE00606CFC /* GTMNSString+HTML.m in Sources */,

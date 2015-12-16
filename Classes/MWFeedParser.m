@@ -31,6 +31,7 @@
 #import "MWFeedParser_Private.h"
 #import "NSString+HTML.h"
 #import "NSDate+InternetDateTime.h"
+#import "FeedCache.h"
 
 // NSXMLParser Logging
 #if 0 // Set to 1 to enable XML parsing logs
@@ -385,7 +386,17 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-	
+  
+    NSString *urlString = [self.url absoluteString];
+    NSData *data = [FeedCache loadDataForFeed:urlString];
+    
+    if(data){
+        NSLog(@"Loading from cache");
+        [asyncData setLength:0];
+        [asyncData appendData:data];
+        return [self connectionDidFinishLoading:connection];
+    }
+    
 	// Failed
 	self.urlConnection = nil;
 	self.asyncData = nil;
@@ -400,6 +411,8 @@
 	
 	// Succeed
 	MWLog(@"MWFeedParser: Connection successful... received %d bytes of data", [asyncData length]);
+    
+    [FeedCache storeDataForFeed:[self.url absoluteString] data:asyncData];
 	
 	// Parse
 	if (!stopped) [self startParsingData:asyncData textEncodingName:self.asyncTextEncodingName];
