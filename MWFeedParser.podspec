@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
     s.subspec 'FeedParser' do |ss|
         ss.source_files = 'Classes/MWFeedInfo.{h,m}',
                           'Classes/MWFeedItem.{h,m}',
+                          'Classes/FeedCache.{h,m}',
                           'Classes/MWFeedParser.{h,m}',
                           'Classes/MWFeedParser_Private.h'
         ss.dependency 'MWFeedParser/NSString+HTML'
