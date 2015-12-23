@@ -33,7 +33,7 @@
 
 @implementation MWFeedInfo
 
-@synthesize title, link, summary, url;
+@synthesize title, link, summary, url, logo;
 
 #pragma mark NSObject
 
