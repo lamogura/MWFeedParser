@@ -13,4 +13,7 @@
 @property (nonatomic, retain) NSXMLParser *xmlParser;
 @property (nonatomic, retain) NSMutableArray *images;
 
+
++ (NSArray *) parseImagesFromXHTMLString:(NSString *)html;
+
 @end

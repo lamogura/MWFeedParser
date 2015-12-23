@@ -32,6 +32,7 @@
 #import "NSString+HTML.h"
 #import "NSDate+InternetDateTime.h"
 #import "FeedCache.h"
+#import "MWImageParser.h"
 
 // NSXMLParser Logging
 #if 0 // Set to 1 to enable XML parsing logs
@@ -705,6 +706,9 @@
         if (!processed) {
             if (((feedType == FeedTypeRSS || feedType == FeedTypeRSS1) && [qName isEqualToString:@"item"]) ||
                 (feedType == FeedTypeAtom && [qName isEqualToString:@"entry"])) {
+                
+                // Extract images
+                item.images = [MWImageParser parseImagesFromXHTMLString:item.content ? item.content : item.summary];
                 
                 // Dispatch item to delegate
                 [self dispatchFeedItemToDelegate];
