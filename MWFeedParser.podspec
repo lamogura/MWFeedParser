@@ -18,10 +18,12 @@ Pod::Spec.new do |s|
         ss.source_files = 'Classes/MWFeedInfo.{h,m}',
                           'Classes/MWFeedItem.{h,m}',
                           'Classes/FeedCache.{h,m}',
+                          'Classes/MWImageParser.{h,m}',
                           'Classes/MWFeedParser.{h,m}',
                           'Classes/MWFeedParser_Private.h'
         ss.dependency 'MWFeedParser/NSString+HTML'
         ss.dependency 'MWFeedParser/NSDate+InternetDateTime'
+        ss.dependency 'CTidy'
     end
     s.subspec 'NSString+HTML' do |ss|
         s.platform = nil

@@ -3,7 +3,7 @@
 
 @implementation FeedCache
 +(NSString *)pathForFeedCache:(NSString *)url {
-    return [NSString stringWithFormat:@"%@/%d.dat",
+    return [NSString stringWithFormat:@"%@/%lu.dat",
             [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0],
             [url hash]];
 }
