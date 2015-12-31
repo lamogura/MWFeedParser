@@ -67,6 +67,17 @@
 - (void) parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     
     if ([elementName isEqual:@"img"]) {
+        NSString *height = [attributeDict objectForKey:@"height"];
+        NSString *width = [attributeDict objectForKey:@"width"];
+        
+        if(height && [height integerValue] <= 1) {
+            return;
+        }
+
+        if(width && [width integerValue] <= 1) {
+            return;
+        }
+        
         NSString *src = [attributeDict objectForKey:@"src"];
         if (src) {
             [self.images addObject:src];

@@ -35,6 +35,7 @@
 
 @synthesize identifier, title, link, date, updated, summary, content, author, enclosures, images;
 
+
 #pragma mark NSObject
 
 - (NSString *)description {
@@ -44,6 +45,14 @@
 	//if (link)    [string appendFormat:@" (%@)", link];
 	//if (summary) [string appendFormat:@", %@", EXCERPT(summary, 50)];
 	return string;
+}
+
+-(id) init {
+    if (self = [super init]){
+        images = [[NSMutableArray alloc] init];
+    }
+    
+    return self;
 }
 
 
